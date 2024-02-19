@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Courier;
+}
+
+:root {
+  --border-color: #ebf2f7;
+  --btn-color: #003bfd;
+  --light-bg: #EEF5FF;
+}
+
+/* Reuseable classes */
+.btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--btn-color);
+  font-weight: bold;
+  color: #fff;
+}
+
+
+nav {
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffff;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.navbar {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+
+
+.logobox {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.logobox a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-logo {
+  height: 50px;
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.nav-list li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.nav-list li a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+
+}
+
+.nav-list li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--btn-color);
+  position: absolute;
+  border-radius: 50px;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+  /* Add transition for smooth effect */
+}
+
+.nav-list li a:hover::after,
+nav-active {
+  width: 100%;
+  background-color: var(--btn-color);
+}
+
+.nav-active::after {
+  width: 100%;
+}
+
+.search-box {
+  background-color: var(--border-color);
+  border-radius: 50px;
+  padding-right: 12px;
+  overflow: hidden;
+}
+
+#search {
+  padding: 8px 10px;
+  padding-left: 20px;
+  outline: none;
+  font-size: 16px;
+  background-color: var(--border-color);
+  border: 2px solid var(--border-color);
+}
+
+.icon-box {
+  padding: 10px;
+  background-color: var(--border-color);
+  border-radius: 10px;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 40px;
+  padding: 10px 20px;
+}
+
+.left-box {
+  height: 100vh;
+  width: 300px;
+  list-style: none;
+}
+
+.left-box-wrap {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.left-box ul {
+  margin-top: 10px;
+}
+
+.left-box ul li {
+  padding: 10px 20px;
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 14px;
+}
+
+
+.left-box ul li:hover {
+  padding: 10px 20px;
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: var(--border-color);
+  border-radius: 14px;
+}
+
+.left-box ul li:hover {
+  background-color: var(--border-color);
+}
+
+.middle-box {
+  height: 100vh;
+}
+
+.middle {
+  margin: 10px auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px auto;
+}
+
+.middle-box .middle-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-color);
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+.middle-child {
+  padding: 10px 20px;
+  color: #fff;
+  display: inline-block;
+}
+
+.child-active {
+  background-color: #0202cf;
+}
+
+.middle-child:hover {
+  background-color: #0202cf;
+}
+
+.middle-child1,
+.middle-child2 {
+  border-right: 2px solid #ffffff;
+}
+
+.right-box {
+  width: 210px;
+}
+
+.ask-box {
+  background-color: var(--light-bg);
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.user-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: block;
+  margin-right: 10px;
+  background-color: var(--border-color);
+}
+
+textarea {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  resize: none;
+  font-size: 16px;
+}
+
+
+.btns {
+  color: #fff;
+  margin-top: 10px;
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.qn-box-btns {
+  color: #fff;
+  margin-top: 10px;
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tag-btns {
+  margin-top: 10px;
+  background-color: var(--border-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.qn-btns-tag {
+  padding: 4px 10px;
+  color: #fff;
+  border-radius: 100px;
+  display: inline-block;
+  background-color: var(--btn-color);
+}
+
+
+.box-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-btn {
+  padding: 8px 10px;
+}
+
+.ask-btn {
+  width: 100px;
+  padding: 8px 10px;
+}
+
+/* Questions */
+.qn-boxes {
+  height: 120px;
+  margin-top: 40px;
+}
+
+.qn-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.qn-box {
+  background-color: var(--light-bg);
+  display: flex;
+  overflow: hidden;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.qn-head {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.qn-para {
+  font-size: 14px;
+  margin-top: 14px;
+  opacity: 80%;
+}
+
+.qn-btn {
+  margin-top: 10px;
+}
+
+/* Courses Page */
+.center {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.courses-head {
+  text-align: center;
+}
+
+.course {
+  margin-top: 40px;
+  width: 380px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  background-color: var(--border-color);
+}
+
+.course-box {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.course-img {
+  width: 100%;
+  height: 150px;
+  background-color: #c0c0c0;
+  border-radius: 30px;
+}
+
+.course-img-1 {
+  background-size: cover;
+  background-position: top top;
+  background-image: url(images/physics.jpg);
+}
+
+.course-img-2 {
+  background-size: cover;
+  background-position: center center;
+  background-image: url(images/chem.jpg);
+}
+
+.course-img-3 {
+  background-size: cover;
+  background-position: center center;
+  background-image: url(images/math.jpg);
+}
+
+.course-desc {
+  margin-top: 20px;
+}
+
+.course-tag {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px 0;
+  opacity: 60%;
+}
+
+.course-head {
+  margin: 10px 0;
+}
+
+.course-para {
+  font-size: 16px;
+}
+
+.course-btn {
+  background-color: var(--btn-color);
+  padding: 10px 20px;
+  color: #ffff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.course-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.skill-head {
+  margin-top: 60px;
+}
+
+.skill-box {
+  padding-bottom: 200px;
+}
+
+
+
+/* Courses Physics */
+.chapter-section {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+.video-box {
+  height: 400px;
+  background-color: red;
+  border-radius: 20px;
+  overflow: hidden;
+}
